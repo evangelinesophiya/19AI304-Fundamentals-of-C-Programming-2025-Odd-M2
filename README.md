@@ -15,7 +15,7 @@
   
   The program should display the average marks up to two decimal places and the corresponding grade. 
   
-# Date : 
+# Date : 19-05-2026
 # Aim:
  To build a C program that receives inputs for a student’s marks in three subjects, calculates the average, and determines the grade using nested if-else statements with safe floating-point comparisons.
 # Algorithm:
@@ -56,7 +56,42 @@
 ### Step 11:
   Stop
 # Program:
+```
+#include <stdio.h>
+
+int main() {
+    float math, science, english, average;
+    printf("Enter marks for Math: ");
+    scanf("%f", &math);
+
+    printf("Enter marks for Science: ");
+    scanf("%f", &science);
+
+    printf("Enter marks for English: ");
+    scanf("%f", &english);
+    average = (math + science + english) / 3.0f;
+
+    if (average >= 90.0f) {
+        printf("Average = %.2f\nGrade = A\n", average);
+    } else {
+        if (average >= 75.0f) {
+            printf("Average = %.2f\nGrade = B\n", average);
+        } else {
+            if (average >= 50.0f) {
+                printf("Average = %.2f\nGrade = C\n", average);
+            } else {
+                printf("Average = %.2f\nGrade = F\n", average);
+            }
+        }
+    }
+
+    return 0;
+}
+
+```
 # Output:
+<img width="382" height="240" alt="Screenshot 2026-05-18 103859" src="https://github.com/user-attachments/assets/7b21ea9f-340d-4da9-9b19-9f89864c292a" />
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -88,7 +123,23 @@ Thus, the program was implemented and executed successfully, and the required ou
   Stop
 
 # Program:
+```
+#include <stdio.h>
+
+int main() {
+    int number = 15;  
+    int i;            
+    for (i = 1; i <= 10; i++) {
+        printf("%d x %d = %d\n", number, i, number * i);
+    }
+
+    return 0;
+}
+
+```
 # Output:
+<img width="232" height="364" alt="Screenshot 2026-05-18 104206" src="https://github.com/user-attachments/assets/0a7070f9-558c-4458-953e-5952e63b4149" />
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -131,7 +182,33 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 7:   
   Stop
 # Program:
+```
+#include <stdio.h>
+
+int main() {
+    int n, i = 2, f = 0;
+    printf("Enter a number: ");
+    scanf("%d", &n);
+    while (i < n ) {
+        if (n % i == 0) {
+            f = 1;   
+            break;
+        }
+        i++;
+    }
+    if (f == 0 && n > 1) {
+        printf("%d is a Prime number\n", n);
+    } else {
+        printf("%d is Not a Prime number\n", n);
+    }
+
+    return 0;
+}
+
+```
 # Output:
+<img width="267" height="156" alt="Screenshot 2026-05-18 104436" src="https://github.com/user-attachments/assets/212ecb6f-aa08-4352-b988-14e71262c4b9" />
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -179,7 +256,24 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 8:   
   Stop
 # Program:
+```
+#include <stdio.h>
+int main() {
+    int n = 5, i, j;
+    for (i = 1; i <= n; i++) {
+        for (j = i; j <= n; j++)
+            printf((i == 1 || j == i) ? "%d" : " ", j);
+        for (j = 1; j < i; j++)
+            printf((i == n || j == i - 1) ? "%d" : " ", n - j);
+        printf("\n");
+    }
+    return 0;
+}
+
+```
 # Output:
+<img width="154" height="232" alt="Screenshot 2026-05-18 104824" src="https://github.com/user-attachments/assets/40bc3f60-54ce-40d5-ad3f-721d70bb5ed3" />
+
 # Result: 
   Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -232,6 +326,31 @@ Thus, the program was implemented and executed successfully, and the required ou
   Decrease i by 1 and go back to Step 6.
 ### Step 8:
   Stop
+# Program:
+```
+#include <stdio.h>
+
+int main() {
+    int i, j;
+    printf("0\n");
+    for (i = 7; i >= 1; i--) {
+        for (j = i; j <= 7; j++) {
+            printf("%d ", j);
+        }
+        printf("0 ");
+        for (j = 7; j >= i; j--) {
+            printf("%d ", j);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
+```
+# Output:
+<img width="373" height="327" alt="Screenshot 2026-05-18 105857" src="https://github.com/user-attachments/assets/2600dbb6-ba12-4122-b5fd-38fd9a9e2d4b" />
+
 # Result:
   Thus, the program was implemented and executed successfully, and the required output was obtained.
 
